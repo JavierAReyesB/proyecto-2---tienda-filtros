@@ -1,0 +1,108 @@
+.jd-header {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.jd-header__container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.jd-header__logo {
+  width: 50px;
+  height: auto;
+}
+
+.jd-header__nav {
+  display: flex;
+}
+
+.jd-header__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.jd-header__link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.jd-header__link:hover {
+  color: #ffd700;
+}
+
+.jd-header__icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.jd-header__icon {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jd-header__icon--filter {
+  background-image: url('https://icons.veryicon.com/png/o/miscellaneous/alicloud-official-website/filter-32.png');
+}
+
+.jd-header__icon--profile {
+  background-image: url('https://www.svgrepo.com/show/316857/profile-simple.svg');
+}
+
+.jd-header__icon--cart {
+  background-image: url('https://www.svgrepo.com/show/419033/cart-trolley-shop.svg');
+}
+
+.jd-header__hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.jd-header__hamburger img {
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+  .jd-header__hamburger {
+    display: block;
+  }
+
+  .jd-header__nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .jd-header__nav.is-open {
+    display: flex;
+  }
+
+  .jd-header__nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

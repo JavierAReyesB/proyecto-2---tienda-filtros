@@ -1,0 +1,112 @@
+.products-section-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.generic-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 500px;
+}
+
+.generic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.generic-card__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.generic-card__brand {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.generic-card__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.generic-card__details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.generic-card__price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-left: auto;
+}
+
+.generic-card__button {
+  background-color: #f5f5f5;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.generic-card__button:hover {
+  background-color: #fbff00;
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .products-section-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .generic-card {
+    height: auto;
+  }
+
+  .generic-card__image {
+    height: 180px;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 769px) {
+  .products-section-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.filtered-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
