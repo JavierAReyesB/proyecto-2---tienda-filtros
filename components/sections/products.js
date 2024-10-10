@@ -82,10 +82,17 @@ export function renderFilteredProducts(filters) {
   const app = document.getElementById('app')
   const footer = document.querySelector('footer')
 
+  // Eliminar mensaje anterior si existe
+  const existingMessage = document.querySelector('.suggestion-message')
+  if (existingMessage) {
+    existingMessage.remove()
+  }
+
   if (filteredProducts.length === 0) {
     const suggestionMessage = document.createElement('p')
     suggestionMessage.textContent =
       'No se encontraron productos con los filtros seleccionados. Aquí tienes algunos productos sugeridos:'
+    suggestionMessage.className = 'suggestion-message' // Añadir clase para identificar
     suggestionMessage.style.textAlign = 'center'
     suggestionMessage.style.margin = '20px 0'
 
@@ -124,3 +131,4 @@ export function renderFilteredProducts(filters) {
 
   app.insertBefore(newProductsSection, footer)
 }
+
