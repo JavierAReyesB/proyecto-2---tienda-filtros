@@ -1,11 +1,12 @@
 .jd-filter-section {
   position: relative;
   padding: 10px;
-  background-color: #f8f8f8;
+  background-color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: height 0.3s ease-in-out;
+  font-family: var(--font-family);
 }
 
 .jd-filter-section__container {
@@ -19,23 +20,27 @@
 .jd-filter-section__select,
 .jd-filter-section__input {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--quinary-color);
   border-radius: 5px;
   width: 100%;
   max-width: 150px;
+  background-color: var(--tertiary-color);
+  color: var(--quinary-color);
 }
 
 .jd-filter-section__button {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #ddd;
+  background-color: var(--tertiary-color);
   cursor: pointer;
   transition: background-color 0.3s;
+  color: var(--secondary-color);
 }
 
 .jd-filter-section__button:hover {
-  background-color: #ccc;
+  background-color: var(--tertiary-color);
+  box-shadow: 0px 4px 6px var(--shadow-color);
 }
 
 .jd-filter-section__toggle {
@@ -47,12 +52,12 @@
   transform: translateX(-50%) translateY(50%);
   cursor: pointer;
   font-size: 24px;
-  color: #333;
+  color: var(--secondary-color);
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--tertiary-color);
+  box-shadow: 0px 4px 6px var(--shadow-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,12 +66,12 @@
 
 .jd-filter-section__toggle:hover {
   transform: translateX(-50%) translateY(50%) scale(1.1);
-  background-color: #f0f0f0;
+  background-color: var(--octonary-color);
 }
 
 .jd-filter-section__arrow {
   font-size: 20px;
-  color: #333;
+  color: var(--secondary-color);
   transition: transform 0.3s ease;
 }
 
