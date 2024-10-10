@@ -1,6 +1,6 @@
 .jd-header {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--quaternary-color);
   padding: 15px 0;
   display: flex;
   justify-content: center;
@@ -37,13 +37,16 @@
 
 .jd-header__link {
   text-decoration: none;
-  color: #000000;
+  color: var(--secondary-color);
   font-size: 16px;
   font-weight: bold;
+  font-family: var(--font-family);
+  background-color: transparent;
 }
 
 .jd-header__link:hover {
-  color: #ffd700;
+  color: var(--primary-color);
+  background-color: transparent;
 }
 
 .jd-header__icons {
@@ -91,7 +94,7 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--quaternary-color);
     flex-direction: column;
     gap: 15px;
     text-align: center;
